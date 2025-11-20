@@ -1,19 +1,20 @@
 #include <iostream>
 #include <string>
+#include <iomanip>
 
 using namespace std;
 int main(){
-    string nama_paket,nama_pelanggan,jenispaketwisata,diskon;
-    double harga_paket, total_harga;
-    int jumlah_wisatawan;
-    float hargadiskon;
-    char pilihan,jenis;
-    
-   
-    
-    // destinasi = "Bandung zoo dan Museum gedung sate", "Rancaupas dan Ciwalini", "The Great asia africa dan trans studio bandung";
+    cout << fixed << setprecision(0);
 
-    cout << "===Sistem Pengelolaan Paket Wisata dan Perhitungan Biaya Perjalanan==="<<endl;
+    string nama_paket,nama_pelanggan,jenispaketwisata,diskon;
+    double harga_paket, total_harga, hargadiskon,rata_perorang, biaya_admin;
+    int jumlah_wisatawan;
+    char pilihan,jenis;
+    bool rombonganbesar;
+
+    rombonganbesar = (jumlah_wisatawan >=20);
+    
+    cout << "===Sistem Pemesanan Paket Wisata==="<<endl;
     cout << "Masukan nama pemesan     :   ";
     getline(cin,nama_pelanggan);
     cout << "Pilihan Paket destinasi"<<endl;
@@ -73,27 +74,42 @@ int main(){
             return 0;
     }
 
+        rombonganbesar = (jumlah_wisatawan >=20);
+
     if (jumlah_wisatawan>=5 && jenispaketwisata == "VIP")
     {
         cout<<"Anda mendapat diskon 20%"<<endl;
         double potongan = total_harga*0.2;
         hargadiskon = total_harga-potongan;
         diskon="20%";
-    } else{
+    }else{
         cout<<"Anda tidak memenuhi syarat diskon"<<endl;
         hargadiskon = total_harga;
         diskon="0%";
     }
-    
-    cout<<"====Struk Pemesanan===="<<endl;
-    cout<<"Paket destinasai yang dipilih : Paket"<<pilihan<<endl;
-    cout<<"Jenis paket                   : "<<jenispaketwisata<<endl;
-    cout<<"Jumlah Wisatawan              : "<<jumlah_wisatawan<<endl;
-    cout<<"======================="<<endl;
-    cout<<"Total harga                   : "<<total_harga<<endl;
-    cout<<"Diskon                        : "<<diskon<<endl;
-    cout<<"Harga setelah diskon          : "<<hargadiskon<<endl;
 
+    biaya_admin = 5000;
+    hargadiskon = hargadiskon + biaya_admin;
+
+    rata_perorang = hargadiskon / jumlah_wisatawan;
+
+
+    
+        cout<<"================Struk Pemesanan=================="<<endl;
+        cout<<"Paket destinasai yang dipilih : Paket "<<pilihan<<endl;
+        cout<<"Jenis paket                   : "<<jenispaketwisata<<endl;
+        cout<<"Jumlah Wisatawan              : "<<jumlah_wisatawan<<endl;
+        cout<<"================================================="<<endl;
+        cout<<"Total harga                   : "<<total_harga<<endl;
+        cout<<"Diskon                        : "<<diskon<<endl;
+        cout<<"Harga setelah diskon          : "<<hargadiskon<<endl;
+        cout<<"Rata rata per-orang           : "<<rata_perorang<<endl;
+        cout<<"================================================="<<endl;
+    if (rombonganbesar)
+    {
+        cout<<"Keterangan : Pesanan anda adalah rombongan besar";
+    }
+    
 
     
 
