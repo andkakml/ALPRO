@@ -47,7 +47,7 @@ int main(){
         default:
             cout<<"Pilihan tidak valid";
             continue;
-            return 0;
+            break;
         }
         
         cout << "Pilih jenis paket (R = Reguler, V = VIP): ";
@@ -68,8 +68,8 @@ int main(){
                 break;
 
             default:
-                cout << "Jenis paket tidak valid!\n\n";
-                return 0;
+                cout << "\nnJenis paket tidak valid!\n\n";
+                continue;
         }
 
             cout << "Masukan jumlah wisatawan   :   ";
@@ -101,9 +101,17 @@ int main(){
                 cout<<"\nPesanan dibatalkan\n\n"<<endl;
                 continue;
             } else {
-                cout<<"Hanya jawab Ya atau tidak"<<endl;
-                cout<<"Konfirmasi pesanan? (Iya/Tidak)"<<endl;
-                cin>>jawaban;
+               cout<<"Hanya jawab Ya atau tidak"<<endl;
+               cout<<"Konfirmasi pesanan? (Iya/Tidak)"<<endl;
+               cin>>jawaban;
+               if (jawaban == "tidak")
+               {
+                    konfirmasi=false;
+                    cout<<"\nPesanan dibatalkan\n\n"<<endl;
+                    continue;
+               }
+               
+
             }
             
             
