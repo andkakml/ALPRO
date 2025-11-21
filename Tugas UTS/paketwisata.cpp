@@ -70,18 +70,17 @@ int main(){
             default:
                 cout << "\nnJenis paket tidak valid!\n\n";
                 continue;
-        }
+            }
 
             cout << "Masukan jumlah wisatawan   :   ";
             cin >> jumlah_wisatawan;
 
-        
-            if (jumlah_wisatawan<=0)
+            while (jumlah_wisatawan<= 0)
             {
                 cout << "Jumlah wisatawan tidak boleh 0"<<endl;
                 cout << "Masukan jumlah wisatawan   :   ";
                 cin >> jumlah_wisatawan;
-            }
+            }                                                                                                                                                                                                             
 
             subtotal = harga_paket*jumlah_wisatawan;
             rombonganbesar = (jumlah_wisatawan >=20);
@@ -107,48 +106,47 @@ int main(){
                if (jawaban == "tidak")
                {
                     konfirmasi=false;
-                    cout<<"\nPesanan dibatalkan\n\n"<<endl;
+                    cout<<"\nPesanan dibatalkan, sistem kembali ke awal\n\n"<<endl;
                     continue;
                }
                
 
             }
-            
-            
-
-        if ((jumlah_wisatawan>=5 && jenispaketwisata == "VIP")||jumlah_wisatawan >= 25)
-        {
-            double potongan = subtotal*0.2;
-            hargadiskon = subtotal-potongan;
-            diskon="20%";
-        }else{
-            hargadiskon = subtotal;
-            diskon="0%";
-        }
-
-        biaya_admin = 5000;
-        hargadiskon = hargadiskon + biaya_admin;
-
-        rata_perorang = hargadiskon / jumlah_wisatawan;
 
 
+            if ((jumlah_wisatawan>=5 && jenispaketwisata == "VIP")||jumlah_wisatawan >= 25)
+            {
+                double potongan = subtotal*0.2;
+                hargadiskon = subtotal-potongan;
+                diskon="20%";
+            }else{
+                hargadiskon = subtotal;
+                diskon="0%";
+            }
 
-            cout<<"================Struk Pemesanan=================="<<endl;
-            cout<<"Paket destinasai yang dipilih : Paket "<<pilihan<<endl;
-            cout<<"Jenis paket                   : "<<jenispaketwisata<<endl;
-            cout<<"Jumlah Wisatawan              : "<<jumlah_wisatawan<<endl;
-            cout<<"================================================="<<endl;
-            cout<<"Subtotal                      : Rp."<<subtotal<<endl;
-            cout<<"Biaya Admin                   : Rp."<<biaya_admin<<endl;
-            cout<<"Diskon                        : Rp."<<diskon<<endl;
-            cout<<"Total harga                   : Rp."<<hargadiskon<<endl;
-            cout<<"Rata rata per-orang           : Rp."<<rata_perorang<<endl;
-            cout<<"==================Terima Kasih==================="<<endl;
+            biaya_admin = 5000;
+            hargadiskon = hargadiskon + biaya_admin;
 
-        if (rombonganbesar)
-        {
-            cout<<"Keterangan : Pesanan anda adalah rombongan besar";
-        }
+            rata_perorang = hargadiskon / jumlah_wisatawan;
+
+
+
+                cout<<"================Struk Pemesanan=================="<<endl;
+                cout<<"Paket destinasai yang dipilih : Paket "<<pilihan<<endl;
+                cout<<"Jenis paket                   : "<<jenispaketwisata<<endl;
+                cout<<"Jumlah Wisatawan              : "<<jumlah_wisatawan<<endl;
+                cout<<"================================================="<<endl;
+                cout<<"Subtotal                      : Rp."<<subtotal<<endl;
+                cout<<"Biaya Admin                   : Rp."<<biaya_admin<<endl;
+                cout<<"Diskon                        : Rp."<<diskon<<endl;
+                cout<<"Total harga                   : Rp."<<hargadiskon<<endl;
+                cout<<"Rata rata per-orang           : Rp."<<rata_perorang<<endl;
+                cout<<"==================Terima Kasih==================="<<endl;
+
+            if (rombonganbesar)
+            {
+                cout<<"Keterangan : Pesanan anda adalah rombongan besar";
+            }
 
         break;
     }
