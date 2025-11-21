@@ -7,15 +7,16 @@
 using namespace std;
 int main(){
     cout << fixed << setprecision(0);
-
+    
+    string nama_paket,nama_pelanggan,jenispaketwisata,diskon,jawaban;
+    double harga_paket, subtotal, hargadiskon,rata_perorang, biaya_admin;
+    int jumlah_wisatawan;
+    char pilihan,jenis;
+    bool rombonganbesar, konfirmasi;
+    
     while (true)
     {
 
-        string nama_paket,nama_pelanggan,jenispaketwisata,diskon,jawaban;
-        double harga_paket, subtotal, hargadiskon,rata_perorang, biaya_admin;
-        int jumlah_wisatawan;
-        char pilihan,jenis;
-        bool rombonganbesar, konfirmasi;
         
         cout << "===Sistem Pemesanan Paket Wisata==="<<endl;
         cout << "Masukan nama pemesan     :   ";
