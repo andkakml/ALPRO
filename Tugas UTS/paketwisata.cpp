@@ -33,16 +33,16 @@ int main(){
         switch (pilihan)
         {
         case 'A': case 'a':
-            harga_paket = 75000;
+            harga_paket = 250000;
             cout << "Detail Paket Bandung zoo dan Museum gedung sate"<<endl;
 
             break;
         case 'B': case 'b':
-            harga_paket = 85000;
+            harga_paket = 350000;
             cout << "Detail Paket Rancaupas dan Ciwalini"<<endl;
             break;
         case 'C': case 'c':
-            harga_paket = 165000;
+            harga_paket = 765000;
             cout << "Detail Paket The Great Asia Africa dan Trans Studio Bandung"<<endl;
             break;
         default:
