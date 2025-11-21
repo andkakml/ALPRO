@@ -16,8 +16,6 @@ int main(){
         int jumlah_wisatawan;
         char pilihan,jenis;
         bool rombonganbesar, konfirmasi;
-
-        rombonganbesar = (jumlah_wisatawan >=20);
         
         cout << "===Sistem Pemesanan Paket Wisata==="<<endl;
         cout << "Masukan nama pemesan     :   ";
