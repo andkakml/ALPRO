@@ -7,7 +7,7 @@
 using namespace std;
 int main(){
     cout << fixed << setprecision(0);
-    
+
     string nama_paket,nama_pelanggan,jenispaketwisata,diskon,jawaban;
     double harga_paket, subtotal, hargadiskon,rata_perorang, biaya_admin;
     int jumlah_wisatawan;
@@ -22,7 +22,7 @@ int main(){
         cout << "Masukan nama pemesan     :   ";
         cin.ignore(numeric_limits<streamsize>::max(), '\n');
         getline(cin,nama_pelanggan);
-        cout << "Pilihan Paket destinasi"<<endl;
+        cout << "Pilihan Paket Wisata"<<endl;
         cout << "Paket A :  Bandung zoo dan Museum gedung sate"<<endl;
         cout << "Paket B :  Rancaupas dan Ciwalini"<<endl;
         cout << "Paket C :  The Great asia africa dan trans studio bandung"<<endl;
