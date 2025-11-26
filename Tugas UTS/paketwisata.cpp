@@ -90,29 +90,27 @@ int main(){
 
             transform(jawaban.begin(), jawaban.end(), jawaban.begin(), ::tolower);
 
-            if (jawaban == "iya")
+            while (true)
             {
-                konfirmasi=true;
-                cout<<"Struk akan dicetak!"<<endl;
-            } else if (jawaban == "tidak")
-            {
-                konfirmasi=false;
-                cout<<"\nPesanan dibatalkan\n\n"<<endl;
-                continue;
-            } else {
-               cout<<"Hanya jawab Ya atau tidak"<<endl;
-               cout<<"Konfirmasi pesanan? (Iya/Tidak)"<<endl;
-               cin>>jawaban;
-               if (jawaban == "tidak")
-               {
+                    if (jawaban == "iya")
+                {
+                    konfirmasi=true;
+                    cout<<"Struk akan dicetak!"<<endl;
+                    break;
+                } else if (jawaban == "tidak")
+                {
                     konfirmasi=false;
-                    cout<<"\nPesanan dibatalkan, sistem kembali ke awal\n\n"<<endl;
-                    continue;
-               }
-               
+                    cout<<"\nPesanan dibatalkan\n\n"<<endl;
+                    break;
+                }
+                cout <<"Jawaban tidak valid, Hanya jawab Iya atau Tidak"<<endl;
 
             }
-
+            
+            if (!konfirmasi)
+            {
+                continue;
+            }
 
             if ((jumlah_wisatawan>=5 && jenispaketwisata == "VIP")||jumlah_wisatawan >= 25)
             {
@@ -150,11 +148,6 @@ int main(){
 
         break;
     }
-    
-
-   
-    
-
 
     return 0;
 }
