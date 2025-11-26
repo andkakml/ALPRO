@@ -43,15 +43,15 @@ int main(){
         case 'C': case 'c':
             harga_paket = 765000;
             cout << "Detail Paket The Great Asia Africa dan Trans Studio Bandung"<<endl;
-            break;
+            break;  
         default:
             cout<<"Pilihan tidak valid";
             continue;
-            break;
         }
         
         cout << "Pilih jenis paket (R = Reguler, V = VIP): ";
         cin >> jenis;
+        
 
         switch (jenis) {
             case 'R':
