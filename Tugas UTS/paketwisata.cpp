@@ -45,7 +45,7 @@ int main(){
             cout << "Detail Paket The Great Asia Africa dan Trans Studio Bandung"<<endl;
             break;  
         default:
-            cout<<"Pilihan tidak valid";
+            cout<<"Pilihan tidak valid\n";
             continue;
         }
         
@@ -135,6 +135,7 @@ int main(){
 
                 cout<<"================Struk Pemesanan=================="<<endl;
                 cout<<"Paket destinasai yang dipilih : Paket "<<pilihan<<endl;
+                cout<<"Harga Paket                   : Rp."<<harga_paket<<endl;
                 cout<<"Jenis paket                   : "<<jenispaketwisata<<endl;
                 cout<<"Jumlah Wisatawan              : "<<jumlah_wisatawan<<endl;
                 cout<<"================================================="<<endl;
