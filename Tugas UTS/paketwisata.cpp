@@ -12,7 +12,7 @@ int main(){
     double harga_paket, subtotal, hargadiskon,rata_perorang, biaya_admin;
     int jumlah_wisatawan;
     char pilihan,jenis;
-    bool rombonganbesar, konfirmasi;
+    bool rombonganbesar, konfirmasi=false;
     
     while (true)
     {
@@ -63,12 +63,12 @@ int main(){
             case 'V':
             case 'v':
                 jenispaketwisata = "VIP";
-                harga_paket *= 1.5; // harga VIP 50% lebih mahal
+                harga_paket *= 1.5; 
                 cout << "Jenis Paket VIP Harga Rp."<<harga_paket<<endl;
                 break;
 
             default:
-                cout << "\nnJenis paket tidak valid!\n\n";
+                cout << "\nJenis paket tidak valid!\n\n";
                 continue;
             }
 
@@ -85,14 +85,15 @@ int main(){
             subtotal = harga_paket*jumlah_wisatawan;
             rombonganbesar = (jumlah_wisatawan >=20);
 
-            cout<<"Konfirmasi pesanan? (Iya/Tidak)"<<endl;
-            cin>>jawaban;
-
-            transform(jawaban.begin(), jawaban.end(), jawaban.begin(), ::tolower);
-
+            
             while (true)
             {
-                    if (jawaban == "iya")
+                cout<<"Konfirmasi pesanan? (Iya/Tidak)"<<endl;
+                cin>>jawaban;
+    
+                transform(jawaban.begin(), jawaban.end(), jawaban.begin(), ::tolower);
+
+                if (jawaban == "iya")
                 {
                     konfirmasi=true;
                     cout<<"Struk akan dicetak!"<<endl;
@@ -102,8 +103,11 @@ int main(){
                     konfirmasi=false;
                     cout<<"\nPesanan dibatalkan\n\n"<<endl;
                     break;
+                }else{
+                    cout <<"Jawaban tidak valid, hanya jawab iya atau tidak\n"<<endl;
+                    
                 }
-                cout <<"Jawaban tidak valid, Hanya jawab Iya atau Tidak"<<endl;
+                
 
             }
             
