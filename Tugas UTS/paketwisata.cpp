@@ -9,7 +9,7 @@ int main(){
     cout << fixed << setprecision(0);
 
     string nama_paket,nama_pelanggan,jenispaketwisata,diskon,jawaban;
-    double harga_paket, subtotal, hargadiskon,rata_perorang, biaya_admin;
+    double harga_paket, subtotal, hargadiskon, rata_perorang, biaya_admin;
     int jumlah_wisatawan;
     char pilihan,jenis;
     bool rombonganbesar, konfirmasi=false;
@@ -44,7 +44,8 @@ int main(){
             break;  
         default:
             cout<<"Pilihan tidak valid\n";
-            continue;
+            return 0;
+            break;
         }
         
         cout << "Pilih jenis paket (R = Reguler, V = VIP): ";
@@ -149,6 +150,6 @@ int main(){
 
         break;
     }
-
     return 0;
+    
 }
