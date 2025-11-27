@@ -16,8 +16,6 @@ int main(){
     
     while (true)
     {
-
-        
         cout << "===Sistem Pemesanan Paket Wisata==="<<endl;
         cout << "Masukan nama pemesan     :   ";
         cin.ignore(numeric_limits<streamsize>::max(), '\n');
@@ -130,8 +128,6 @@ int main(){
             hargadiskon = hargadiskon + biaya_admin;
 
             rata_perorang = hargadiskon / jumlah_wisatawan;
-
-
 
                 cout<<"================Struk Pemesanan=================="<<endl;
                 cout<<"Paket destinasai yang dipilih : Paket "<<pilihan<<endl;
